@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#A8584F">
+<title>Suporte | Secretária+</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#211C1C;
+  --brown:#4A3530;
+  --cream:#FAF5EF;
+  --cream-mid:#F2E8DD;
+  --terracota:#A8584F;
+  --terracota-dark:#8C4640;
+  --gold:#C5A468;
+  --gold-light:#DDC394;
+  --white:#FFFFFF;
+  --text-dark:#211C1C;
+  --text-mid:#5C4D47;
+  --text-muted:#8A7A72;
+  --shadow-sm:0 2px 12px rgba(33,28,28,.06);
+  --shadow-md:0 8px 32px rgba(33,28,28,.08);
+}
+body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text-dark);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.7}
+a{text-decoration:none;color:var(--terracota-dark);font-weight:500}
+.serif{font-family:'Fraunces',Georgia,serif}
+
+nav{position:sticky;top:0;z-index:10;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;background:rgba(250,245,239,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(33,28,28,.06)}
+.nav-back{font-size:14px;color:var(--text-mid);display:flex;align-items:center;gap:6px;font-weight:500}
+.nav-logo{font-family:'Fraunces',serif;font-size:18px;font-weight:500;color:var(--text-dark)}
+
+.legal-hero{background:var(--terracota);color:var(--white);padding:64px 24px 48px;text-align:center}
+.legal-hero span{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:rgba(250,245,239,.6);display:block;margin-bottom:12px;font-weight:600}
+.legal-hero h1{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(28px,5vw,42px)}
+.legal-hero p{margin-top:10px;font-size:14px;color:rgba(250,245,239,.6);max-width:420px;margin-left:auto;margin-right:auto}
+
+.content{max-width:760px;margin:0 auto;padding:56px 24px 100px}
+
+.channels{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:56px}
+.channel-card{background:var(--white);border-radius:18px;padding:28px 24px;box-shadow:var(--shadow-sm);text-align:center;transition:transform .2s,box-shadow .2s}
+.channel-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-md)}
+.channel-icon{width:48px;height:48px;border-radius:50%;background:var(--cream-mid);display:flex;align-items:center;justify-content:center;font-size:22px;margin:0 auto 14px}
+.channel-card h3{font-size:15px;font-weight:600;margin-bottom:6px}
+.channel-card p{font-size:13px;color:var(--text-muted);margin-bottom:14px}
+.channel-link{display:inline-block;background:var(--terracota);color:var(--white);padding:10px 22px;border-radius:100px;font-size:13px;font-weight:500}
+.channel-link:hover{background:var(--terracota-dark);text-decoration:none}
+
+.section-title{font-family:'Fraunces',serif;font-weight:400;font-size:26px;margin-bottom:28px;text-align:center}
+
+.faq-item{background:var(--white);border-radius:14px;margin-bottom:10px;box-shadow:var(--shadow-sm);overflow:hidden}
+.faq-btn{width:100%;background:none;border:none;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;text-align:left;font-size:14.5px;font-weight:500;color:var(--text-dark)}
+.faq-toggle{width:26px;height:26px;border-radius:50%;background:var(--cream-mid);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;color:var(--terracota);transition:all .25s;margin-left:12px}
+.faq-btn[aria-expanded="true"] .faq-toggle{background:var(--terracota);color:var(--white);transform:rotate(45deg)}
+.faq-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.faq-body.open{max-height:200px}
+.faq-body p{padding:0 22px 18px;font-size:13.5px;color:var(--text-mid)}
+
+.hours-box{background:var(--cream-mid);border-radius:16px;padding:24px 28px;margin-top:48px;text-align:center}
+.hours-box strong{display:block;font-size:14px;margin-bottom:6px}
+.hours-box span{font-size:13px;color:var(--text-muted)}
+
+footer{background:var(--black);color:rgba(250,245,239,.35);padding:28px 24px;text-align:center;font-size:12px}
+footer a{color:var(--gold)}
+.footer-credit{margin-top:8px;opacity:.7}
+
+@media(max-width:640px){
+  .legal-hero{padding:48px 20px 36px}
+  .content{padding:40px 20px 80px}
+  .channels{grid-template-columns:1fr;gap:12px}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-back">← Voltar para o início</a>
+  <span class="nav-logo">Secretária+</span>
+</nav>
+
+<section class="legal-hero">
+  <span>Estamos aqui para ajudar</span>
+  <h1 class="serif">Suporte</h1>
+  <p>Dúvidas sobre acesso, pagamento ou conteúdo? Fale com a gente pelos canais abaixo.</p>
+</section>
+
+<div class="content">
+
+  <div class="channels">
+    <div class="channel-card">
+      <div class="channel-icon">💬</div>
+      <h3>WhatsApp</h3>
+      <p>Resposta mais rápida, ideal para dúvidas urgentes sobre acesso ou pagamento.</p>
+      <a href="https://wa.me/5541992935913?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20o%20curso%20Secret%C3%A1ria%2B" class="channel-link" target="_blank" rel="noopener">+55 41 99293-5913</a>
+    </div>
+    <div class="channel-card">
+      <div class="channel-icon">✉️</div>
+      <h3>E-mail</h3>
+      <p>Ideal para solicitações de reembolso, nota fiscal ou assuntos mais formais.</p>
+      <a href="mailto:melissa@grupormais.com" class="channel-link">melissa@grupormais.com</a>
+    </div>
+  </div>
+
+  <h2 class="section-title serif">Perguntas frequentes</h2>
+
+  <div class="accordion">
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">Comprei o curso, mas ainda não recebi o acesso. O que faço?<span class="faq-toggle">+</span></button>
+      <div class="faq-body"><p>O acesso é liberado automaticamente pela Kiwify em até 15 minutos após a confirmação do pagamento (Pix costuma ser imediato; cartão pode levar alguns minutos). Verifique sua caixa de spam pelo e-mail de "Kiwify". Se não chegar em até 1 hora, fale com a gente pelo WhatsApp.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">Como funciona a garantia de 7 dias?<span class="faq-toggle">+</span></button>
+      <div class="faq-body"><p>Você tem 7 dias corridos a partir da compra para solicitar reembolso integral, sem precisar justificar o motivo. Basta enviar um e-mail ou mensagem no WhatsApp informando o e-mail usado na compra.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">Por quanto tempo tenho acesso ao curso?<span class="faq-toggle">+</span></button>
+      <div class="faq-body"><p>O acesso é válido por 12 meses a partir da data da compra, com liberação imediata de todos os módulos.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">Posso comprar para treinar minha equipe (sou médico/gestor)?<span class="faq-toggle">+</span></button>
+      <div class="faq-body"><p>Sim. Vários médicos e gestores adquirem o curso para a secretária ou equipe de recepção. O acesso é único por compra; se quiser treinar mais de uma pessoa, fale com a gente para condições especiais.</p></div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-btn" aria-expanded="false">Como solicito a nota fiscal?<span class="faq-toggle">+</span></button>
+      <div class="faq-body"><p>A nota fiscal é emitida automaticamente pela Kiwify e enviada para o e-mail cadastrado na compra. Caso não tenha recebido, fale com a gente pelo e-mail de suporte.</p></div>
+    </div>
+  </div>
+
+  <div class="hours-box">
+    <strong>Horário de atendimento</strong>
+    <span>Segunda a sexta, das 9h às 18h (horário de Brasília)</span>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2025 Secretária+ · Ana Carolina Moresco</p>
+  <p><a href="termos.html">Termos</a> &nbsp;·&nbsp; <a href="privacidade.html">Privacidade</a> &nbsp;·&nbsp; <a href="suporte.html">Suporte</a></p>
+  <p class="footer-credit">Página desenvolvida por <a href="https://www.instagram.com/vier.estudio" target="_blank" rel="noopener">Vier® Estúdio de Comunicação</a></p>
+</footer>
+
+<script>
+document.querySelectorAll('.faq-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    const isOpen = btn.getAttribute('aria-expanded') === 'true';
+    document.querySelectorAll('.faq-btn').forEach(b=>{
+      b.setAttribute('aria-expanded','false');
+      b.nextElementSibling.classList.remove('open');
+    });
+    if(!isOpen){
+      btn.setAttribute('aria-expanded','true');
+      btn.nextElementSibling.classList.add('open');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
